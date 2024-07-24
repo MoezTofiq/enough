@@ -2,6 +2,7 @@ import { Box, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import "./App.css";
 import { useColorMode } from "./context/DarkModeContext";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import { LogoContainer } from "./Components/logoContainer";
 
 function App() {
   const { isDarkMode } = useColorMode();
@@ -24,10 +25,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline enableColorScheme>
         <Box width={"100%"} height={"100%"}>
-          <Grid2 xs={12} sm={12} md={12} lg={12} xl={12} container>
-            <Grid2 xs={12} sm={12} md={12} lg={12} xl={12}>
-              hello
-            </Grid2>
+          <Grid2 container>
+            <LogoContainer />
           </Grid2>
         </Box>
       </CssBaseline>
