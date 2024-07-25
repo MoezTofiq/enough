@@ -10,7 +10,8 @@ export const LogoContainer = () => {
       justifyContent="center"
       alignItems="center"
       width="100%"
-      padding={5}
+      padding={10}
+      paddingTop={20}
     >
       <Grid2 container justifyContent="center" alignItems="center" rowGap={2}>
         <Grid2
@@ -22,10 +23,21 @@ export const LogoContainer = () => {
           display="flex"
           justifyContent="center"
         >
-          <img
+          <Box
+            component="img"
             src={logo}
             alt="Logo"
-            style={{ maxWidth: "300px", maxHeight: "300px" }}
+            sx={{
+              maxWidth: "300px",
+              maxHeight: "300px",
+              height: "12em",
+              padding: "1.5em",
+              willChange: "filter",
+              transition: "filter 300ms",
+              "&:hover": {
+                filter: "drop-shadow(0 0 2em purple)",
+              },
+            }}
           />
         </Grid2>
         <Grid2
