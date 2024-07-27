@@ -13,6 +13,8 @@ import { CustomizationSection } from "./Components/CustomizationSection";
 import { PageCustomization } from "./Components/PageCustomization";
 import { BrowserAvailability } from "./Components/BrowserAvaiblility";
 import { SyncsSettings } from "./Components/SyncingSettings";
+import { ImproveSettings } from "./Components/ImproveSettings";
+import { useState } from "react";
 
 function App() {
   const { isDarkMode } = useColorMode();
@@ -49,6 +51,9 @@ function App() {
           </Grid2>
           <Grid2 container component={Paper}>
             <SyncsSettings />
+          </Grid2>
+          <Grid2 container>
+            <ImproveSettings />
           </Grid2>
         </Box>
       </CssBaseline>
