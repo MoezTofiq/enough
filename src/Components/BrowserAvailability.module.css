@@ -1,0 +1,27 @@
+/* BrowserAvailability.module.css */
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100px; /* Adjust height as necessary */
+}
+
+.sliderInner {
+  display: flex;
+  animation: slide 30s linear infinite; /* Adjust duration as necessary */
+}
+
+.browserLogo {
+  display: inline-block;
+  margin: 0 20px;
+}
