@@ -14,7 +14,6 @@ import { PageCustomization } from "./Components/PageCustomization";
 import { BrowserAvailability } from "./Components/BrowserAvaiblility";
 import { SyncsSettings } from "./Components/SyncingSettings";
 import { ImproveSettings } from "./Components/ImproveSettings";
-import { useState } from "react";
 
 function App() {
   const { isDarkMode } = useColorMode();
@@ -30,6 +29,10 @@ function App() {
       background: {
         default: isDarkMode ? "#282828" : "#f4f4f4",
       },
+    },
+    typography: {
+      fontFamily:
+        "Optimistic Display, -apple-system, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
     },
   });
 

@@ -11,7 +11,7 @@ export const LogoContainer = () => {
       alignItems="center"
       width="100%"
       padding={10}
-      paddingTop={20}
+      paddingTop={15}
     >
       <Grid2 container justifyContent="center" alignItems="center" rowGap={2}>
         <Grid2
@@ -50,12 +50,12 @@ export const LogoContainer = () => {
           justifyContent="center"
         >
           <Typography
-            variant="h3"
+            variant="h2"
             color="primary"
             border={"3px solid"}
             paddingX={6}
             paddingY={1}
-            borderRadius={"64px 6px"}
+            borderRadius={"60px 6px"}
           >
             Enough
           </Typography>
