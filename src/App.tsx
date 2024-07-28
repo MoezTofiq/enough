@@ -1,19 +1,28 @@
-import {
-  Box,
-  createTheme,
-  CssBaseline,
-  Paper,
-  ThemeProvider,
-} from "@mui/material";
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import "./App.css";
 import { useColorMode } from "./context/DarkModeContext";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import { LogoContainer } from "./Components/logoContainer";
-import { CustomizationSection } from "./Components/CustomizationSection";
-import { PageCustomization } from "./Components/PageCustomization";
-import { BrowserAvailability } from "./Components/BrowserAvaiblility";
-import { SyncsSettings } from "./Components/SyncingSettings";
-import { ImproveSettings } from "./Components/ImproveSettings";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import DownloadPage from "./Pages/DownloadPage/DownloadPage.tsx";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage.tsx";
+import { LandingPage } from "./Pages/LandingPage/LandingPage.tsx";
+
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <LandingPage />,
+      errorElement: <ErrorPage />,
+    },
+
+    {
+      path: "/download",
+      element: <DownloadPage />,
+      errorElement: <ErrorPage />,
+    },
+  ],
+  { basename: "/enough" }
+);
 
 function App() {
   const { isDarkMode } = useColorMode();
@@ -39,26 +48,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline enableColorScheme>
-        <Box width={"100%"} height={"100%"}>
-          <Grid2 container component={Paper}>
-            <LogoContainer />
-          </Grid2>
-          <Grid2 container>
-            <CustomizationSection />
-          </Grid2>
-          <Grid2 container component={Paper}>
-            <PageCustomization />
-          </Grid2>
-          <Grid2 container>
-            <BrowserAvailability />
-          </Grid2>
-          <Grid2 container component={Paper}>
-            <SyncsSettings />
-          </Grid2>
-          <Grid2 container>
-            <ImproveSettings />
-          </Grid2>
-        </Box>
+        <RouterProvider router={router} />
       </CssBaseline>
     </ThemeProvider>
   );

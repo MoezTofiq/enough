@@ -1,7 +1,9 @@
 import { Box, Button } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import { useNavigate } from "react-router-dom";
 
 export const GetExtensionButton = () => {
+  const navigate = useNavigate();
   return (
     <Box
       display="flex"
@@ -19,7 +21,13 @@ export const GetExtensionButton = () => {
           display="flex"
           justifyContent="center"
         >
-          <Button variant="contained" sx={{ borderRadius: 10 }}>
+          <Button
+            variant="contained"
+            sx={{ borderRadius: 10 }}
+            onClick={() => {
+              navigate("/download");
+            }}
+          >
             Download Extension
           </Button>
         </Grid2>
