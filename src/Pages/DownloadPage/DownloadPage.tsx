@@ -38,8 +38,12 @@ const DownloadPage = () => {
         Download
         <span style={{ color: "purple" }}>Enough</span>
       </Typography>
-      <Typography variant="h3">The way you want,</Typography>
-      <Typography variant="h4">For what you want</Typography>
+      <Typography variant="h3">
+        The way <span style={{ color: "purple" }}>you</span> want,
+      </Typography>
+      <Typography variant="h4">
+        For what <span style={{ color: "purple" }}>you</span> want
+      </Typography>
       <Grid2
         container
         justifyContent={"center"}
