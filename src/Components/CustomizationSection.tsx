@@ -36,7 +36,7 @@ export const CustomizationSection = () => {
           </Typography>
         </Grid2>
 
-        <Grid2 container xs={12} sm={12} md={12} lg={12} xl={12} spacing={16}>
+        <Grid2 container xs={12} sm={12} md={12} lg={12} xl={12} spacing={10}>
           <Grid2
             xs={12}
             sm={12}
