@@ -40,7 +40,7 @@ const DownloadPage = () => {
         alignContent={"center"}
         display={"flex"}
         padding={5}
-        rowSpacing={2}
+        rowSpacing={4}
       >
         <Grid2 xs={12} sm={12} md={12} lg={12} xl={12}>
           <Typography
@@ -55,7 +55,7 @@ const DownloadPage = () => {
             }}
           >
             Download
-            <span style={{ color: "purple" }}>Enough</span>
+            <span style={{ color: "#cc3e8e" }}>Enough</span>
           </Typography>
           <Typography
             sx={{
@@ -68,7 +68,7 @@ const DownloadPage = () => {
               },
             }}
           >
-            The way <span style={{ color: "purple" }}>you</span> want,
+            The way <span style={{ color: "#cc3e8e" }}>you</span> want,
           </Typography>
           <Typography
             sx={{
@@ -81,17 +81,17 @@ const DownloadPage = () => {
               },
             }}
           >
-            For what <span style={{ color: "purple" }}>you</span> want
+            For what <span style={{ color: "#cc3e8e" }}>you</span> want
           </Typography>
         </Grid2>
         <Grid2 xs={12} sm={12} md={12} lg={12} xl={12}>
           <Paper
             elevation={24}
             sx={{
-              boxShadow: "0 0 10px 5px rgba(128, 0, 128, 0.5)",
+              boxShadow: "0 0 10px 5px rgba(204, 62, 142,0.5)",
               transition: "box-shadow 0.3s ease-in-out",
               "&:hover": {
-                boxShadow: "0 0 20px 10px rgba(128, 0, 128, 0.75)",
+                boxShadow: "0 0 20px 10px rgba(204, 62, 142,0.5)",
               },
             }}
           >
