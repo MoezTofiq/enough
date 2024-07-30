@@ -20,6 +20,11 @@ const router = createBrowserRouter(
       element: <DownloadPage />,
       errorElement: <ErrorPage />,
     },
+    {
+      path: "/download/",
+      element: <DownloadPage />,
+      errorElement: <ErrorPage />,
+    },
   ],
   { basename: "/enough" }
 );
