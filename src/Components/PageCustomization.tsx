@@ -19,9 +19,13 @@ export const PageCustomization = () => {
           xl={12}
           display="flex"
           justifyContent="center"
+          flexDirection={"column"}
         >
           <Typography variant="h2" color="primary" textAlign={"center"}>
             Customize
+          </Typography>
+          <Typography variant="h6" color="primary" textAlign={"center"}>
+            what you see
           </Typography>
         </Grid2>
         <Grid2
@@ -48,9 +52,7 @@ export const PageCustomization = () => {
           justifyContent="center"
           alignItems={"center"}
           flexDirection={"column"}
-        >
-          what you see (show after image slide)
-        </Grid2>
+        ></Grid2>
       </Grid2>
     </Box>
   );

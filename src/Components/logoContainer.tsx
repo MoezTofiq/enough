@@ -77,7 +77,7 @@ export const LogoContainer = () => {
             textAlign={"center"}
             paddingBottom={1}
           >
-            Customize and control you social media experience
+            Customize and control your social media experience
           </Typography>
           <Typography variant="h6" color="primary" textAlign={"center"}>
             Removing distractions, seamlessly across browser
