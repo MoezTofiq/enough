@@ -81,6 +81,8 @@ export const PageCustomization = () => {
             width={"900px"}
             maxWidth={"100%"}
             height={"500px"}
+            maxHeight={"100%"}
+            sx={{}}
           >
             {images.map((image, index) => (
               <img

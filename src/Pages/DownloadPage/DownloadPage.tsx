@@ -34,84 +34,161 @@ console.log(rows);
 const DownloadPage = () => {
   return (
     <Box width={"100%"} height={"100%"} textAlign={"center"}>
-      <Typography variant="h1">
-        Download
-        <span style={{ color: "purple" }}>Enough</span>
-      </Typography>
-      <Typography variant="h3">
-        The way <span style={{ color: "purple" }}>you</span> want,
-      </Typography>
-      <Typography variant="h4">
-        For what <span style={{ color: "purple" }}>you</span> want
-      </Typography>
       <Grid2
         container
         justifyContent={"center"}
         alignContent={"center"}
         display={"flex"}
         padding={5}
+        rowSpacing={2}
       >
-        <Paper
-          elevation={24}
-          sx={{
-            boxShadow: "0 0 10px 5px rgba(128, 0, 128, 0.5)",
-            transition: "box-shadow 0.3s ease-in-out",
-            "&:hover": {
-              boxShadow: "0 0 20px 10px rgba(128, 0, 128, 0.75)",
-            },
-          }}
-        >
-          <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 750 }} aria-label="DownLoad table">
-              <TableHead>
-                <TableRow>
-                  <TableCell>Browser</TableCell>
-                  <TableCell align="right">Extension Store</TableCell>
-                  <TableCell align="right">Offline DownLoad</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows.map((row) => (
-                  <TableRow
-                    key={row.browser}
-                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  >
-                    <TableCell component="th" scope="row">
-                      <Box display="flex" alignItems="center">
-                        <img
-                          src={row.icon}
-                          alt={row.browser}
-                          style={{ width: 24, height: 24, marginRight: 8 }}
-                        />
-                        {row.browser}
-                      </Box>
+        <Grid2 xs={12} sm={12} md={12} lg={12} xl={12}>
+          <Typography
+            sx={{
+              typography: {
+                xs: "h4",
+                sm: "h3",
+                md: "h2",
+                lg: "h1",
+                xl: "h1",
+              },
+            }}
+          >
+            Download
+            <span style={{ color: "purple" }}>Enough</span>
+          </Typography>
+          <Typography
+            sx={{
+              typography: {
+                xs: "h5",
+                sm: "h4",
+                md: "h3",
+                lg: "h3",
+                xl: "h3",
+              },
+            }}
+          >
+            The way <span style={{ color: "purple" }}>you</span> want,
+          </Typography>
+          <Typography
+            sx={{
+              typography: {
+                xs: "h6",
+                sm: "h5",
+                md: "h4",
+                lg: "h4",
+                xl: "h4",
+              },
+            }}
+          >
+            For what <span style={{ color: "purple" }}>you</span> want
+          </Typography>
+        </Grid2>
+        <Grid2 xs={12} sm={12} md={12} lg={12} xl={12}>
+          <Paper
+            elevation={24}
+            sx={{
+              boxShadow: "0 0 10px 5px rgba(128, 0, 128, 0.5)",
+              transition: "box-shadow 0.3s ease-in-out",
+              "&:hover": {
+                boxShadow: "0 0 20px 10px rgba(128, 0, 128, 0.75)",
+              },
+            }}
+          >
+            <TableContainer component={Paper}>
+              <Table sx={{ minWidth: "100%" }} aria-label="DownLoad table">
+                <TableHead>
+                  <TableRow>
+                    <TableCell>
+                      <Typography
+                        sx={{
+                          typography: {
+                            xs: "caption",
+                            sm: "h5",
+                            md: "h4",
+                            lg: "h4",
+                            xl: "h4",
+                          },
+                        }}
+                      >
+                        Browser
+                      </Typography>
                     </TableCell>
-                    {BrowserStoreLinks[
-                      row.browser as keyof typeof BrowserStoreLinks
-                    ] ? (
-                      <TableCell align="right">
-                        <a
-                          href={
-                            BrowserStoreLinks[
-                              row.browser as keyof typeof BrowserStoreLinks
-                            ]
-                          }
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Go to {row.browser} store
-                        </a>
-                      </TableCell>
-                    ) : (
-                      <TableCell align="right">{row.storeLink}</TableCell>
-                    )}
-                    <TableCell align="right">{row.offlineDownload}</TableCell>
+                    <TableCell align="right">
+                      <Typography
+                        sx={{
+                          typography: {
+                            xs: "caption",
+                            sm: "h5",
+                            md: "h4",
+                            lg: "h4",
+                            xl: "h4",
+                          },
+                        }}
+                      >
+                        Extension Store
+                      </Typography>
+                    </TableCell>
+                    <TableCell align="right">
+                      <Typography
+                        sx={{
+                          typography: {
+                            xs: "caption",
+                            sm: "h5",
+                            md: "h4",
+                            lg: "h4",
+                            xl: "h4",
+                          },
+                        }}
+                      >
+                        Offline DownLoad
+                      </Typography>
+                    </TableCell>
                   </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </Paper>
+                </TableHead>
+                <TableBody>
+                  {rows.map((row) => (
+                    <TableRow
+                      key={row.browser}
+                      sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                    >
+                      <TableCell component="th" scope="row">
+                        <Box display="flex" alignItems="center">
+                          <img
+                            src={row.icon}
+                            alt={row.browser}
+                            style={{ width: 24, height: 24, marginRight: 8 }}
+                          />
+                          {row.browser}
+                        </Box>
+                      </TableCell>
+                      {BrowserStoreLinks[
+                        row.browser as keyof typeof BrowserStoreLinks
+                      ] ? (
+                        <TableCell align="right">
+                          <a
+                            href={
+                              BrowserStoreLinks[
+                                row.browser as keyof typeof BrowserStoreLinks
+                              ]
+                            }
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Go to {row.browser} store
+                          </a>
+                        </TableCell>
+                      ) : (
+                        <TableCell align="right">{row.storeLink}</TableCell>
+                      )}
+                      <TableCell align="right">{row.offlineDownload}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </Paper>
+        </Grid2>
       </Grid2>
     </Box>
   );
