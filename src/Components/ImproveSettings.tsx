@@ -19,23 +19,14 @@ export const ImproveSettings = () => {
           xl={12}
           display="flex"
           justifyContent="center"
+          flexDirection={"column"}
         >
           <Typography variant="h2" color="primary" textAlign={"center"}>
             Improve loading times
           </Typography>
-        </Grid2>
-        <Grid2
-          xs={12}
-          sm={12}
-          md={12}
-          lg={12}
-          xl={12}
-          display="flex"
-          justifyContent="center"
-          alignItems={"center"}
-          flexDirection={"column"}
-        >
-          two gif showing the loading with and without enough enabled
+          <Typography variant="h6" color="primary" textAlign={"center"}>
+            By not loading sections on the screen
+          </Typography>
         </Grid2>
       </Grid2>
     </Box>
