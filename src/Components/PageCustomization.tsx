@@ -33,7 +33,7 @@ export const PageCustomization = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 2000); // Change image every 3 seconds
+    }, 2000); // Change image every 2 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -78,11 +78,10 @@ export const PageCustomization = () => {
         >
           <Box
             position="relative"
-            width={"900px"}
-            maxWidth={"100%"}
-            height={"500px"}
-            maxHeight={"100%"}
-            sx={{}}
+            width="100%"
+            height="0"
+            paddingTop="56.25%" // 16:9 aspect ratio
+            maxHeight="80vh"
           >
             {images.map((image, index) => (
               <img
@@ -95,6 +94,7 @@ export const PageCustomization = () => {
                   left: 0,
                   width: "100%",
                   height: "100%",
+                  objectFit: "cover",
                   opacity: index === currentImageIndex ? 1 : 0,
                   transition: "opacity 1s ease-in-out",
                 }}
