@@ -2,8 +2,10 @@ import { Box, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import logo from "../assets/logo.png";
 import { GetExtensionButton } from "./GetExtensionButton";
+import { useNavigate } from "react-router-dom";
 
 export const LogoContainer = () => {
+  const navigate = useNavigate();
   return (
     <Box
       display="flex"
@@ -25,6 +27,9 @@ export const LogoContainer = () => {
         >
           <Box
             component="img"
+            onClick={() => {
+              navigate("/download");
+            }}
             src={logo}
             alt="Logo"
             sx={{
@@ -34,6 +39,7 @@ export const LogoContainer = () => {
               padding: "1.5em",
               willChange: "filter",
               transition: "filter 300ms",
+              cursor: "pointer",
               "&:hover": {
                 filter: "drop-shadow(0 0 2em purple)",
               },

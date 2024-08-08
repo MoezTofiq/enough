@@ -26,7 +26,7 @@ export const BrowserAvailability = () => {
           justifyContent="center"
         >
           <Typography variant="h2" color="primary" textAlign={"center"}>
-            Coming on every Browser
+            Coming soon to every Browser
           </Typography>
         </Grid2>
         <Grid2
