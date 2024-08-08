@@ -1,4 +1,11 @@
-import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import {
+  Box,
+  Container,
+  createTheme,
+  CssBaseline,
+  ThemeProvider,
+  Typography,
+} from "@mui/material";
 import "./App.css";
 import { useColorMode } from "./context/DarkModeContext";
 
@@ -6,6 +13,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import DownloadPage from "./Pages/DownloadPage/DownloadPage.tsx";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage.tsx";
 import { LandingPage } from "./Pages/LandingPage/LandingPage.tsx";
+import logo from "./assets/logo.png";
 
 const router = createBrowserRouter(
   [
@@ -53,7 +61,37 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline enableColorScheme>
-        <RouterProvider router={router} />
+        <Container maxWidth={false} disableGutters>
+          <main>
+            <RouterProvider router={router} />
+            <Box
+              width={"100%"}
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              flexDirection={"row"}
+            >
+              <Box
+                component="img"
+                src={logo}
+                alt="Logo"
+                padding={1}
+                sx={{
+                  maxWidth: "50px",
+                  maxHeight: "50px",
+
+                  // willChange: "filter",
+                  // transition: "filter 300ms",
+                  // cursor: "pointer",
+                  // "&:hover": {
+                  //   filter: "drop-shadow(0 0 2em purple)",
+                  // },
+                }}
+              />
+              <Typography variant="button">enough &copy;</Typography>
+            </Box>
+          </main>
+        </Container>
       </CssBaseline>
     </ThemeProvider>
   );
