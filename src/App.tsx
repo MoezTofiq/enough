@@ -14,7 +14,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import DownloadPage from "./Pages/DownloadPage/DownloadPage.tsx";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage.tsx";
 import { LandingPage } from "./Pages/LandingPage/LandingPage.tsx";
-import logo from "./assets/logo.png";
 
 const router = createBrowserRouter(
   [

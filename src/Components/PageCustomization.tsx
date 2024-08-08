@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, Modal, Typography } from "@mui/material";
+import { Box, IconButton, Modal, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { useEffect, useState } from "react";
 import image1 from "../assets/customize/1.png";
