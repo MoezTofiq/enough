@@ -1,4 +1,4 @@
-import { Box, Modal, Typography } from "@mui/material";
+import { Box, Button, IconButton, Modal, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { useEffect, useState } from "react";
 import image1 from "../assets/customize/1.png";
@@ -12,6 +12,7 @@ import image8 from "../assets/customize/8.png";
 import image9 from "../assets/customize/9.png";
 import image10 from "../assets/customize/10.png";
 import image11 from "../assets/customize/11.png";
+import CancelIcon from "@mui/icons-material/Cancel";
 
 const images = [
   image1,
@@ -124,15 +125,15 @@ export const PageCustomization = () => {
           alignItems: "center",
         }}
       >
-        <Box
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          position="relative"
-          onClick={handleOpen}
-          width={"80%"}
-          height={"75%"}
-        >
+        <Box position="relative" width={"80%"} height={"75%"}>
+          <IconButton
+            aria-label="close"
+            size="large"
+            onClick={handleClose}
+            sx={{ position: "absolute", zIndex: 3 }}
+          >
+            <CancelIcon fontSize="inherit" color="primary" />
+          </IconButton>
           {images.map((image, index) => (
             <img
               key={index}
