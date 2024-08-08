@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Modal, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { useEffect, useState } from "react";
 import image1 from "../assets/customize/1.png";
@@ -29,6 +29,9 @@ const images = [
 
 export const PageCustomization = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -82,6 +85,15 @@ export const PageCustomization = () => {
             height="0"
             paddingTop="56.25%" // 16:9 aspect ratio
             maxHeight="80vh"
+            onClick={handleOpen}
+            sx={{
+              willChange: "filter",
+              transition: "filter 300ms",
+              cursor: "pointer",
+              "&:hover": {
+                filter: "drop-shadow(0 0 2em purple)",
+              },
+            }}
           >
             {images.map((image, index) => (
               <img
@@ -103,6 +115,45 @@ export const PageCustomization = () => {
           </Box>
         </Grid2>
       </Grid2>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Box
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          position="relative"
+          onClick={handleOpen}
+          width={"80%"}
+          height={"75%"}
+        >
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Slide ${index + 1}`}
+              style={{
+                position: "absolute",
+                top: 0,
+                bottom: 0,
+                right: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "fill",
+                opacity: index === currentImageIndex ? 1 : 0,
+                transition: "opacity 1s ease-in-out",
+              }}
+            />
+          ))}
+        </Box>
+      </Modal>
     </Box>
   );
 };

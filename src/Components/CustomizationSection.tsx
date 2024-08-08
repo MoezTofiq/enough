@@ -47,6 +47,14 @@ export const CustomizationSection = () => {
             justifyContent="center"
             alignItems={"center"}
             flexDirection={"column"}
+            sx={{
+              willChange: "filter",
+              transition: "filter 300ms",
+              cursor: "pointer",
+              "&:hover": {
+                filter: "drop-shadow(0 0 2em purple)",
+              },
+            }}
           >
             <ReactCompareImage
               leftImage={image3}
@@ -70,6 +78,14 @@ export const CustomizationSection = () => {
             justifyContent="center"
             alignItems={"center"}
             flexDirection={"column"}
+            sx={{
+              willChange: "filter",
+              transition: "filter 300ms",
+              cursor: "pointer",
+              "&:hover": {
+                filter: "drop-shadow(0 0 2em purple)",
+              },
+            }}
           >
             <ReactCompareImage
               leftImage={image1}
