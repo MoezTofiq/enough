@@ -3,6 +3,7 @@ import {
   Container,
   createTheme,
   CssBaseline,
+  Paper,
   ThemeProvider,
   Typography,
 } from "@mui/material";
@@ -70,8 +71,9 @@ function App() {
               justifyContent={"center"}
               alignItems={"center"}
               flexDirection={"row"}
+              component={Paper}
             >
-              <Box
+              {/* <Box
                 component="img"
                 src={logo}
                 alt="Logo"
@@ -87,7 +89,7 @@ function App() {
                   //   filter: "drop-shadow(0 0 2em purple)",
                   // },
                 }}
-              />
+              /> */}
               <Typography variant="button">enough &copy;</Typography>
             </Box>
           </main>
