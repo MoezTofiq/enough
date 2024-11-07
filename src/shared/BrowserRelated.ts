@@ -13,4 +13,6 @@ export const BrowserList: Record<string, string> = {
 
 export const BrowserStoreLinks: Record<string, string> = {
   Edge: "https://microsoftedge.microsoft.com/addons/detail/omjbnmlafmfaglacmkbikffokaelkjcc",
+  FireFox:
+    "https://addons.mozilla.org/en-GB/firefox/addon/enough-control-your-feed/",
 };
